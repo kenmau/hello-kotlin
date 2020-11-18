@@ -2,6 +2,7 @@ package Aquarium
 
 fun main (args: Array<String>) {
     buildAquarium()
+    makeFish()
 }
 
 // public - everywhere
@@ -39,4 +40,19 @@ fun buildAquarium() {
     // This will call the secondary constructor
     val superFish = Fish()
     println("fish is friendly: ${superFish.friendly}. Size is ${superFish.size}")
+}
+
+// Only Fish that implement FishAction can be passed into feedFish
+fun feedFish(fish: FishAction) {
+    fish.eat()
+}
+
+fun makeFish() {
+    val shark = Shark()
+    val pleco = Plecostomus()
+
+    println("Shark Color: ${shark.color}, Pleco Color: ${pleco.color}")
+
+    shark.eat()
+    pleco.eat()
 }
