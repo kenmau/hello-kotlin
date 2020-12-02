@@ -30,6 +30,7 @@ fun makeDecorations() {
     println(diver)
 }
 
+
 data class Decorations(val rocks: String) {}
 
 data class Decorations2(val rocks: String, val wood: String, val diver: String) {}
